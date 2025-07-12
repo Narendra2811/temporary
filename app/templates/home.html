@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>StackIt - Home</title>
+</head>
+
+<body>
+    <h1>All Questions</h1>
+    {% for question in questions %}
+    <div>
+        <h2><a href="{{ url_for('main.question_detail', question_id=question.id) }}">{{ question.title }}</a></h2>
+        <p>{{ question.description }}</p>
+        <hr>
+    </div>
+    {% else %}
+    <p>No questions posted yet.</p>
+    {% endfor %}
+</body>
+
+</html>

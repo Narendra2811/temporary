@@ -1,0 +1,16 @@
+<h2>{{ question.title }}</h2>
+<p>{{ question.description }}</p>
+
+<h3>Answers</h3>
+{% for answer in answers %}
+<p>{{ answer.content }}</p>
+{% if answer.accepted %}<strong>✔ Accepted</strong>{% endif %}
+<hr>
+{% endfor %}
+
+<h3>Submit Your Answer</h3>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.content.label }} {{ form.content }}<br>
+    {{ form.submit }}
+</form>

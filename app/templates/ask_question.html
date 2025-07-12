@@ -1,0 +1,7 @@
+<h2>Ask a New Question</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.title.label }} {{ form.title }}<br>
+    {{ form.description.label }} {{ form.description }}<br>
+    {{ form.submit }}
+</form>
